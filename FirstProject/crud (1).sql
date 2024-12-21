@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2024 at 01:50 PM
+-- Generation Time: Dec 21, 2024 at 12:36 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,29 +44,26 @@ INSERT INTO `password_reset_tokens` (`id`, `email`, `token`, `created_at`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rajister`
+-- Table structure for table `register`
 --
 
-CREATE TABLE `rajister` (
+CREATE TABLE `register` (
   `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `number` bigint(13) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `plan_password` varchar(30) DEFAULT NULL,
   `created_at` date NOT NULL DEFAULT current_timestamp(),
   `update_at` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `rajister`
+-- Dumping data for table `register`
 --
 
-INSERT INTO `rajister` (`id`, `name`, `email`, `number`, `password`, `created_at`, `update_at`) VALUES
-(30, 'Mahammadali Kadiwala', 'maham@gmail.com', 12345678999, '11111111', '2024-12-18', '2024-12-18'),
-(33, 'Mahammadali Kadiwala', 'hasn@gmail.com', 123456789, '55555555', '2024-12-18', '2024-12-18'),
-(34, 'Mahammadali Kadiwala', 'hasn@gmail.com', 123456789, '$2y$12$jWvPP4AOjevVS/eyLwY6DOymg/vrPYXjmeosVuCPSssYG8C4dwbGa', '2024-12-18', '2024-12-18'),
-(35, 'Mahammadali Kadiwala', 'hasn@gmail.com', 123456789, '22222222', '2024-12-18', '2024-12-18'),
-(36, 'Mahammadali Kadiwala', 'hasn@gmail.com', 123456789, '22222222', '2024-12-18', '2024-12-18');
+INSERT INTO `register` (`id`, `name`, `email`, `number`, `password`, `plan_password`, `created_at`, `update_at`) VALUES
+(57, 'Mahammadali Kadiwala', 'hasn@gmail.com', 93164716, '$2y$12$tbZBEe.GL8J9DJZFYxyswen/4.jJy20fCi7O0yMAwPLQGDkwT7J12', '1222222', '2024-12-20', '2024-12-20');
 
 -- --------------------------------------------------------
 
@@ -145,9 +142,9 @@ ALTER TABLE `password_reset_tokens`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `rajister`
+-- Indexes for table `register`
 --
-ALTER TABLE `rajister`
+ALTER TABLE `register`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -173,10 +170,10 @@ ALTER TABLE `password_reset_tokens`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `rajister`
+-- AUTO_INCREMENT for table `register`
 --
-ALTER TABLE `rajister`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+ALTER TABLE `register`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `students`
